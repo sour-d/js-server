@@ -8,6 +8,21 @@ Basic server using HTTP module in js
 
   `const server =  require('server');`
 
-- To start the server with a port
+- To start the server
 
-  `server(1234);`
+  ```
+  const CALLBACK = () => true;
+  server(CALLBACK);
+  ```
+
+- To start the server with port
+
+  ```
+  const PORT = 1234
+  const CALLBACK = () => true;
+  server(CALLBACK, PORT);
+  ```
+  > ## NOTE
+  > Default port is 8000
+
+

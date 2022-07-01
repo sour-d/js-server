@@ -1,8 +1,7 @@
 const http = require('http');
-const { processRequest } = require('../requestProcessor.js');
 
-const server = (PORT) => {
-  const server = http.createServer(processRequest);
+const server = (onRequest, PORT = 8000) => {
+  const server = http.createServer(onRequest);
   server.listen(PORT, () => console.log(`Listening to http://localhost:${PORT}`));
 };
 
